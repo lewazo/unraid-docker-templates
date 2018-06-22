@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>traefik</Name>
+  <Repository>traefik</Repository>
+  <Registry>https://hub.docker.com/_/traefik/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Privileged>false</Privileged>
+  <Support>https://hub.docker.com/_/traefik/</Support>
+  <Project/>
+  <Overview>Tr&#xE6;f&#x26A;k, a modern reverse proxy</Overview>
+  <Category/>
+  <WebUI>http://[IP]:[PORT:8565]</WebUI>
+  <TemplateURL/>
+  <Icon>https://github.com/containous/traefik/raw/master/docs/img/traefik.logo.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <DateInstalled>1519871556</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <DonateImg/>
+  <MinVer/>
+  <Description>Tr&#xE6;f&#x26A;k, a modern reverse proxy</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>80</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>443</HostPort>
+        <ContainerPort>443</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>8565</HostPort>
+        <ContainerPort>8080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/cache/appdata/traefik/</HostDir>
+      <ContainerDir>/etc/traefik</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/var/run/docker.sock</HostDir>
+      <ContainerDir>/var/run/docker.sock</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment/>
+  <Config Name="Host Port 1" Target="80" Default="" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="false" Mask="false">80</Config>
+  <Config Name="Host Port 2" Target="443" Default="" Mode="tcp" Description="Container Port: 443" Type="Port" Display="always" Required="false" Mask="false">443</Config>
+  <Config Name="Host Port 3" Target="8080" Default="" Mode="tcp" Description="Container Port: 8080" Type="Port" Display="always" Required="false" Mask="false">8565</Config>
+  <Config Name="AppData Config Path" Target="/etc/traefik" Default="" Mode="rw" Description="Container Path: /etc/traefik" Type="Path" Display="always" Required="false" Mask="false">/mnt/cache/appdata/traefik/</Config>
+  <Config Name="Docker socket" Target="/var/run/docker.sock" Default="" Mode="rw" Description="Container Path: /var/run/docker.sock" Type="Path" Display="always" Required="false" Mask="false">/var/run/docker.sock</Config>
+</Container>
