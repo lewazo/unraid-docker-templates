@@ -1,6 +1,6 @@
 # unRAID Docker Templates
 
-These are my Docker container templates used to add Docker containers that are not on the Community Applicatins plugin.
+These are my Docker container templates used to add Docker containers that are not on the Community Applications plugin.
 
 ## How to install a template
 In order to use one of these containers, simply add the template file to `/boot/config/plugins/dockerMan/templates-user`.
