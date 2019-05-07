@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>boreale</Name>
+  <Repository>lewazo/boreale</Repository>
+  <Registry>https://hub.docker.com/r/lewazo/boreale</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project/>
+  <Overview>Bor&#xE9;ale is a tiny and simple self-hosted service to handle forward authentication for services behind Traefik reverse proxy.</Overview>
+  <Category/>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon/>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DonateText/>
+  <DonateLink/>
+  <Description>Bor&#xE9;ale is a tiny and simple self-hosted service to handle forward authentication for services behind Traefik reverse proxy.</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort></HostPort>
+        <ContainerPort>4000</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/opt/app/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value/>
+      <Name>COOKIE_NAME</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>ENCRYPTION_SALT</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>PAGE_TITLE</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>SECRET_KEY_BASE</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>SIGNING_SALT</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>SSO_DOMAIN_NAME</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="Host Port 1" Target="4000" Default="" Mode="tcp" Description="Container Port: 4000" Type="Port" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="COOKIE_NAME" Target="COOKIE_NAME" Default="" Mode="" Description="Container Variable: COOKIE_NAME" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="ENCRYPTION_SALT" Target="ENCRYPTION_SALT" Default="" Mode="" Description="Container Variable: ENCRYPTION_SALT" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="PAGE_TITLE" Target="PAGE_TITLE" Default="" Mode="" Description="Container Variable: PAGE_TITLE" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="SECRET_KEY_BASE" Target="SECRET_KEY_BASE" Default="" Mode="" Description="Container Variable: SECRET_KEY_BASE" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="SIGNING_SALT" Target="SIGNING_SALT" Default="" Mode="" Description="Container Variable: SIGNING_SALT" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="SSO_DOMAIN_NAME" Target="SSO_DOMAIN_NAME" Default="" Mode="" Description="Container Variable: SSO_DOMAIN_NAME" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="AppData Config Path:" Target="/opt/app/data" Default="/mnt/user/appdata/boreale" Mode="rw" Description="Container Path: /opt/app/data" Type="Path" Display="advanced-hide" Required="true" Mask="false"></Config>
+</Container>
